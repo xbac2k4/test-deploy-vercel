@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel='stylesheet' href='/stylesheets/movieStyle.css' />
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <main>
+        <h1 class="title text-center">DANH SÁCH VÉ</h1>
+        <div class="nav">
+            <div class="bgr d-flex flex-row justify-content-between">
+                <div class="input-search d-flex flex-row justify-content-between">
+                    <input type="search" placeholder="Search..." name="search" id="search">
+                    <i id="clear" class="bi bi-search"></i>
+                </div>
+            </div>
+        </div>
+        <table border="0" class="table table-striped-columns table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Phim</th>
+                    <th>Ngày chiếu</th>
+                    <th>Thời gian chiếu</th>
+                    <th>Ghế ngồi</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <div id="preloader"></div>
+            <tbody></tbody>
+        </table>
+        <div class="page">
+            <i class="bi bi-caret-left-square" id="ic-giam"></i>
+            <input type="text" name="page-number" id="page-number">
+            <i class="bi bi-caret-right-square" id="ic-tang"></i>
+        </div>
+        <div class="bgr-dialog" id="bgr-dialog">
+            <div class="close-dialog" onclick="closeDialog()"></div>
+            <div class="dialog-content" id="dialog-content"></div>
+        </div>
+
+    </main>
+    <script src="javascripts/ticket.js"></script>
+</body>
+
+</html>
