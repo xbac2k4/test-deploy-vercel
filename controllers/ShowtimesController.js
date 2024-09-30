@@ -1,8 +1,10 @@
 const Room = require("../models/Room");
-const Showtimes = require("../models/Showtimes");
+// const Showtimes = require("../models/Showtimes");
 const Time = require("../models/Time");
 const Category = require("../models/Category");
 const ShowTimesService = require("../services/ShowtimesService");
+const path = require('path');
+const Showtimes = require(path.join(__dirname, '../models/Showtimes'));
 
 class ShowTimesController {
     getAllShowtimes = async (req, res) => {
